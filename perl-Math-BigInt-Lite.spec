@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Math
-%define	pnam	BigInt-Lite
+%define		pdir	Math
+%define		pnam	BigInt-Lite
 Summary:	Math::BigInt::Lite - what BigInts are before they become big
 Summary(pl):	Math::BigInt::Lite - czym by³y BigInty zanim sta³y siê du¿e
 Name:		perl-Math-BigInt-Lite

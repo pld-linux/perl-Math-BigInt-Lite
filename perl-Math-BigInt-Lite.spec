@@ -42,7 +42,7 @@ objects and operation in question to Math::BigInt.
 %description -l pl
 Modu³ Math::BigInt nie jest dobrze dopasowany do pracy z ma³ymi (tzn.
 najczê¶ciej poni¿ej 10 cyfr) liczbami, poniewa¿ ma zbyt du¿y narzut na
-ka¿d± oparacjê, przez co jest zbyt wolny. Ale dla niektórych prostych
+ka¿d± operacjê, przez co jest zbyt wolny. Ale dla niektórych prostych
 aplikacji nie potrzebne jest zaokr±glanie, obs³uga nieskoñczono¶ci czy
 NaN, za to potrzebna jest szybko¶æ obliczeñ na ma³ych liczbach bez
 ryzyka przepe³nienia. Jest to sytuacja, dla której zosta³ stworzony

@@ -10,6 +10,7 @@ Summary(pl):	Math::BigInt::Lite - czym by³y BigInty zanim sta³y siê du¿e
 Name:		perl-Math-BigInt-Lite
 Version:	0.10
 Release:	1
+# same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz

@@ -58,7 +58,7 @@ zostanie powiêkszony, a operacja przeprowadzona przez Math::BigInt.
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 # sqrt(+inf) == inf, not NaN
-%patch -p1
+%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \

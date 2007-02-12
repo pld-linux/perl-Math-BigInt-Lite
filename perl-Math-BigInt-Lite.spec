@@ -6,7 +6,7 @@
 %define		pdir	Math
 %define		pnam	BigInt-Lite
 Summary:	Math::BigInt::Lite - what BigInts are before they become big
-Summary(pl):	Math::BigInt::Lite - czym by³y BigInty zanim sta³y siê du¿e
+Summary(pl.UTF-8):   Math::BigInt::Lite - czym byÅ‚y BigInty zanim staÅ‚y siÄ™ duÅ¼e
 Name:		perl-Math-BigInt-Lite
 Version:	0.10
 Release:	1
@@ -39,21 +39,21 @@ In praxis, however, you will not feel them, because everytime
 something gets to big to pass as Lite (literally), it will upgrade the
 objects and operation in question to Math::BigInt.
 
-%description -l pl
-Modu³ Math::BigInt nie jest dobrze dopasowany do pracy z ma³ymi (tzn.
-najczê¶ciej poni¿ej 10 cyfr) liczbami, poniewa¿ ma zbyt du¿y narzut na
-ka¿d± operacjê, przez co jest zbyt wolny. Ale dla niektórych prostych
-aplikacji nie potrzebne jest zaokr±glanie, obs³uga nieskoñczono¶ci czy
-NaN, za to potrzebna jest szybko¶æ obliczeñ na ma³ych liczbach bez
-ryzyka przepe³nienia. Jest to sytuacja, dla której zosta³ stworzony
+%description -l pl.UTF-8
+ModuÅ‚ Math::BigInt nie jest dobrze dopasowany do pracy z maÅ‚ymi (tzn.
+najczÄ™Å›ciej poniÅ¼ej 10 cyfr) liczbami, poniewaÅ¼ ma zbyt duÅ¼y narzut na
+kaÅ¼dÄ… operacjÄ™, przez co jest zbyt wolny. Ale dla niektÃ³rych prostych
+aplikacji nie potrzebne jest zaokrÄ…glanie, obsÅ‚uga nieskoÅ„czonoÅ›ci czy
+NaN, za to potrzebna jest szybkoÅ›Ä‡ obliczeÅ„ na maÅ‚ych liczbach bez
+ryzyka przepeÅ‚nienia. Jest to sytuacja, dla ktÃ³rej zostaÅ‚ stworzony
 Math::BigInt::Lite.
 
-Obiekty Math::BigInt::Lite powinny zachowywaæ siê tak samo jak obiekty
-Math::BigInt - bez widocznej ró¿nicy oprócz nazwy. Poniewa¿ modu³
-Math::BigInt::Lite jest zaprojektowany z my¶l± o szybko¶ci, ma pewne
-ograniczenia. W praktyce nie powinni¶my ich odczuæ, poniewa¿ je¶li
-tylko co¶ staje siê zbyt du¿e do przekazania jako Lite, obiekt
-zostanie powiêkszony, a operacja przeprowadzona przez Math::BigInt.
+Obiekty Math::BigInt::Lite powinny zachowywaÄ‡ siÄ™ tak samo jak obiekty
+Math::BigInt - bez widocznej rÃ³Å¼nicy oprÃ³cz nazwy. PoniewaÅ¼ moduÅ‚
+Math::BigInt::Lite jest zaprojektowany z myÅ›lÄ… o szybkoÅ›ci, ma pewne
+ograniczenia. W praktyce nie powinniÅ›my ich odczuÄ‡, poniewaÅ¼ jeÅ›li
+tylko coÅ› staje siÄ™ zbyt duÅ¼e do przekazania jako Lite, obiekt
+zostanie powiÄ™kszony, a operacja przeprowadzona przez Math::BigInt.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}

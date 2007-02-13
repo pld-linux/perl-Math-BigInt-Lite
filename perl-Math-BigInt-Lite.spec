@@ -6,7 +6,7 @@
 %define		pdir	Math
 %define		pnam	BigInt-Lite
 Summary:	Math::BigInt::Lite - what BigInts are before they become big
-Summary(pl.UTF-8):   Math::BigInt::Lite - czym były BigInty zanim stały się duże
+Summary(pl.UTF-8):	Math::BigInt::Lite - czym były BigInty zanim stały się duże
 Name:		perl-Math-BigInt-Lite
 Version:	0.10
 Release:	1

@@ -8,18 +8,23 @@
 Summary:	Math::BigInt::Lite - what BigInts are before they become big
 Summary(pl.UTF-8):	Math::BigInt::Lite - czym były BigInty zanim stały się duże
 Name:		perl-Math-BigInt-Lite
-Version:	0.10
+Version:	0.14
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	253dafb83e3317cb6118b2ac6bd23577
-Patch0:		%{name}-test.patch
-BuildRequires:	perl-Math-BigInt >= 1.57
+Source0:	http://www.cpan.org/modules/by-module/Math/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	eaf0d0f526b355d525e7f2857b62be7e
+URL:		http://search.cpan.org/dist/Math-BigInt-Lite/
+BuildRequires:	perl-Math-BigInt >= 1.94
+BuildRequires:	perl-Math-BigRat >= 0.19
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-Requires:	perl-Math-BigInt >= 1.57
+%if %{with tests}
+BuildRequires:	perl-Test-Simple >= 0.52
+%endif
+Requires:	perl-Math-BigInt >= 1.94
+Requires:	perl-Math-BigRat >= 0.19
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,8 +32,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Math::BigInt is not very good suited to work with small (read: typical
 less than 10 digits) numbers, since it has a quite high per-operation
 overhead and is thus too slow. But for some simple applications, you
-don't need rounding, infinity nor NaN handling, and yet want fast speed
-for small numbers without the risk of overflowing. This is were
+don't need rounding, infinity nor NaN handling, and yet want fast
+speed for small numbers without the risk of overflowing. This is were
 Math::BigInt::Lite comes into play.
 
 Math::BigInt::Lite objects should behave in every way like
@@ -57,8 +62,6 @@ zostanie powiększony, a operacja przeprowadzona przez Math::BigInt.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-# sqrt(+inf) == inf, not NaN
-%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
@@ -80,4 +83,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc BUGS CHANGES LICENSE NEW README TODO
 %{perl_vendorlib}/Math/BigInt/Lite.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/Math::BigInt::Lite.3pm*
